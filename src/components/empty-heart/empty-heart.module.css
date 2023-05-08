@@ -7,7 +7,7 @@
 
 .transparent_heart::before,
 .transparent_heart::after {
-  background: white; /* To make this more re-usable, would need to use a style instead or use a svg. */
+  background-color: var(--color);
   border-radius: 50px 50px 0 0;
   content: "";
   height: 13px;

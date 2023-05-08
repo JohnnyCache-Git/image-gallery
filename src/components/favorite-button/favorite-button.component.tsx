@@ -29,6 +29,6 @@ export const FavoriteButton: React.FC<FavoriteButtonProps> = ({
     tabIndex={0}
     type={"button"}
   >
-    {isFavorited ? <Heart /> : <EmptyHeart />}
+    {isFavorited ? <Heart /> : <EmptyHeart transparentColor="white" />}
   </button>
 );
