@@ -10,7 +10,6 @@ type EmptyHeartProps = {
 /**
  * Renders an empty heart. Achieves this by rendering a gray heart with CSS
  * and a transparent heart overlayed with the gray heart using CSS.
- *
  */
 export const EmptyHeart: React.FC<EmptyHeartProps> = ({ transparentColor }) => {
   // Use a CSS var hack to dynamically set the color for the psuedo elements.
