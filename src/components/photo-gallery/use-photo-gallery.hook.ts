@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { selectImages } from "../../api/images/image-slice";
 import { useGetImagesQuery } from "../../api/images/images.api";
 import { useEffect, useMemo } from "react";

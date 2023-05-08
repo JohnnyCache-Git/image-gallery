@@ -2,8 +2,8 @@ import { useDispatch } from "react-redux";
 import { deleteImage, toggleFavoriteImage } from "../../api/images/image-slice";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { ImageResource } from "../../api/images/image.resource";
-import { formatDatetimeAsDate } from "../../app/utils/date.utils";
-import { getDimensionsString } from "../../app/utils/string.utils";
+import { formatDatetimeAsDate } from "../../utils/date.utils";
+import { getDimensionsString } from "../../utils/string.utils";
 import { DetailData } from "../detail/detail.component";
 
 export const usePhotoPanel = (selectedPhoto?: ImageResource) => {

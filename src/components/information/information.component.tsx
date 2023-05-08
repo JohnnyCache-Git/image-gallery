@@ -1,4 +1,4 @@
-import { arrayIsNullOrEmpty } from "../../app/utils/array.utils";
+import { arrayIsNullOrEmpty } from "../../utils/array.utils";
 import { Detail, DetailData } from "../detail/detail.component";
 import { Title } from "../title/title.component";
 import { Underscore } from "../underscore/underscore.component";

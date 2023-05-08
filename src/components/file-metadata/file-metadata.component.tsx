@@ -1,4 +1,4 @@
-import { formatBytes } from "../../app/utils/file.utils";
+import { formatBytes } from "../../utils/file.utils";
 import { Label } from "../label/label.component";
 
 import styles from "./file-metadata.module.css";

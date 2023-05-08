@@ -1,4 +1,4 @@
-import { Size } from "../../api/images/image.resource";
+import { Size } from "../api/images/image.resource";
 
 /**
  * Formats a `Size` object as a string with the dimensions in the format "width × height".
