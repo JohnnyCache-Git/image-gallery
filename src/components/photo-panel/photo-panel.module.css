@@ -1,0 +1,35 @@
+.panel {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 40px;
+  width: 100%;
+}
+
+.image {
+  border-radius: 8px;
+}
+
+.metadata_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.metadata {
+  margin-top: 10px;
+}
+
+.metadata > div:first-child {
+  font-size: 1.4rem;
+}
+
+.delete_button {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.description,
+.information {
+  margin-top: 20px;
+}

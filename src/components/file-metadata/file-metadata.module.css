@@ -1,0 +1,17 @@
+.filename {
+  font-size: 1rem;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 100%;
+  margin-left: 4px;
+  margin-top: 7px;
+}
+
+div.filesize {
+  color: rgb(100, 116, 139);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-left: 4px;
+  margin-top: 6px;
+}

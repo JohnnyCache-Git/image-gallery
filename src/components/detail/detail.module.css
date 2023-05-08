@@ -1,0 +1,7 @@
+.detail {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  white-space: nowrap;
+}

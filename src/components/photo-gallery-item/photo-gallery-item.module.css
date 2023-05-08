@@ -1,0 +1,23 @@
+.photo_gallery_item {
+  display: flex;
+  flex-direction: column;
+}
+
+.thumbnail {
+  height: 150px;
+}
+
+.thumbnail:hover {
+  cursor: pointer;
+  opacity: 0.85;
+}
+
+img.selected {
+  border: solid rgb(79, 69, 228) 3px;
+  opacity: 1;
+  padding: 1px;
+}
+
+.metadata > div {
+  font-size: 0.9rem;
+}

@@ -1,0 +1,8 @@
+.photo {
+  border-radius: 12px;
+  object-fit: cover;
+  opacity: 1;
+  overflow: hidden;
+  padding: 4px;
+  width: 100%;
+}
