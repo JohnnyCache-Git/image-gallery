@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# Image Gallery.
+
+This is an image gallery. It allows a user to view, favorite, and delete images. It loads data from the server but any changes only persist until page is reloaded.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.
 
