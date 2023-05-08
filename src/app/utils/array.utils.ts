@@ -1,7 +1,6 @@
-export const arrayIsNullOrEmpty = (array: object[]) => !array?.length;
-
-export const sortByDateDesc = function (a: any, b: any) {
-  var dateA = new Date(a.createdAt).getTime();
-  var dateB = new Date(b.createdAt).getTime();
-  return dateB - dateA;
-};
+/**
+ * Checks whether an array is null, undefined, or empty.
+ * @param array The array to check.
+ * @returns Returns `true` if the array is null, undefined, or has zero length, otherwise `false`.
+ */
+export const arrayIsNullOrEmpty = (array: object[]): boolean => !array?.length;

@@ -1,6 +1,4 @@
 .tabs {
   border-bottom: 1px solid rgb(203, 213, 225);
   display: flex;
-  margin-bottom: 20px;
-  padding-bottom: 5px;
 }

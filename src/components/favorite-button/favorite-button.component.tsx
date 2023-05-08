@@ -27,6 +27,7 @@ export const FavoriteButton: React.FC<FavoriteButtonProps> = ({
     className={styles.button}
     onClick={onClick}
     tabIndex={0}
+    type={"button"}
   >
     {isFavorited ? <Heart /> : <EmptyHeart />}
   </button>

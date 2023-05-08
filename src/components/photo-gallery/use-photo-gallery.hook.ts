@@ -4,7 +4,7 @@ import { useGetImagesQuery } from "../../api/images/images.api";
 import { useEffect, useMemo } from "react";
 import { PHOTO_GALLERY_FILTER_OPTIONS } from "./photo-gallery.component";
 import { ImageResource } from "../../api/images/image.resource";
-import { sortByDateDesc } from "../../app/utils/array.utils";
+import { sortByDateDesc } from "./photo-gallery.utils";
 
 export const usePhotoGallery = (
   filter: PHOTO_GALLERY_FILTER_OPTIONS,

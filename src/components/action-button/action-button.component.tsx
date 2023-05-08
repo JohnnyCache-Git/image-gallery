@@ -39,6 +39,7 @@ export const ActionButton: React.FC<ActionButtonProps> = ({
       onClick={onClick}
       tabIndex={0}
       aria-label={ariaLabel}
+      type={"button"}
     >
       {children}
     </button>

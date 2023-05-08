@@ -1,19 +1,19 @@
 .heart {
-  position: relative;
-  width: 25px;
   height: 22px;
   margin-top: 10px;
+  position: relative;
+  width: 25px;
 }
 
 .heart::before,
 .heart::after {
+  background: red;
+  height: 20px;
+  border-radius: 50px 50px 0 0;
   content: "";
   position: absolute;
   top: 0;
   width: 13px;
-  height: 20px;
-  border-radius: 50px 50px 0 0;
-  background: red;
 }
 
 .heart::before {

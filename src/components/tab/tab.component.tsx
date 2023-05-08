@@ -23,7 +23,7 @@ type TabProps = {
  * A tab.
  */
 export const Tab: React.FC<TabProps> = ({ isSelected, onClick, children }) => (
-  <div
+  <button
     className={classNames(styles.tab, {
       [styles.selected_tab]: isSelected,
     })}
@@ -32,5 +32,5 @@ export const Tab: React.FC<TabProps> = ({ isSelected, onClick, children }) => (
     role="tab"
   >
     {children}
-  </div>
+  </button>
 );

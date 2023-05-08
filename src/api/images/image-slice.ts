@@ -1,7 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-// import { RootState, AppThunk } from '../../app/store';
-// import { fetchCount } from './counterAPI';
-
 import { ImageResource } from "./image.resource";
 import { apiSlice } from "./images.api";
 

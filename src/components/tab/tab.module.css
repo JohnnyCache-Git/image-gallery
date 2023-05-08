@@ -7,11 +7,10 @@
   font-weight: 650;
   height: 100%;
   margin-right: 20px;
-  padding-bottom: 8px;
+  padding: 0 0 20px 0;
 }
 
 .selected_tab {
   border-bottom: solid 2px rgb(79, 69, 228);
   color: rgb(79, 69, 228);
-  padding-bottom: 4px;
 }
