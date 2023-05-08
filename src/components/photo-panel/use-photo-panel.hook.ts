@@ -1,13 +1,13 @@
-import { useDispatch } from "react-redux";
 import { deleteImage, toggleFavoriteImage } from "../../api/images/image-slice";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { ImageResource } from "../../api/images/image.resource";
 import { formatDatetimeAsDate } from "../../utils/date.utils";
 import { getDimensionsString } from "../../utils/string.utils";
 import { DetailData } from "../detail/detail.component";
+import { useAppDispatch } from "../../app/hooks";
 
 export const usePhotoPanel = (selectedPhoto?: ImageResource) => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const [panelPhoto, setPanelPhoto] = useState<ImageResource | undefined>(
     selectedPhoto
   );
