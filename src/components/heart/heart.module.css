@@ -1,8 +1,7 @@
 .heart {
   height: 22px;
-  margin-top: 10px;
   position: relative;
-  width: 25px;
+  width: 26px;
 }
 
 .heart::before,

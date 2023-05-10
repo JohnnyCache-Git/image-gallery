@@ -3,7 +3,6 @@
   font-weight: 600;
   max-width: 100%;
   margin-left: 4px;
-  margin-top: 7px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -14,4 +13,9 @@ div.filesize {
   font-weight: 600;
   margin-left: 4px;
   margin-top: 6px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
 }

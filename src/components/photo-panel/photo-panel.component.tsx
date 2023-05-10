@@ -3,7 +3,6 @@ import { Description } from "../description/description.component";
 import { Information } from "../information/information.component";
 import { Photo } from "../photo.component.tsx/photo.component";
 import { FileMetaData } from "../file-metadata/file-metadata.component";
-import { FavoriteButton } from "../favorite-button/favorite-button.component";
 import { usePhotoPanel } from "./use-photo-panel.hook";
 import { ActionButton } from "../action-button/action-button.component";
 
@@ -29,7 +28,7 @@ export const PhotoPanel: React.FC<PhotoPanelProps> = ({
   selectedPhoto,
   onDeletePhoto,
 }) => {
-  const { details, onClickDelete, onClickFavorite, panelPhoto } = usePhotoPanel(
+  const { details, onClickDelete, panelPhoto, onClickFavorite } = usePhotoPanel(
     selectedPhoto,
     onDeletePhoto
   );
@@ -41,17 +40,13 @@ export const PhotoPanel: React.FC<PhotoPanelProps> = ({
   return (
     <div className={styles.panel}>
       <Photo className={styles.photo} photo={panelPhoto} />
-      <div className={styles.metadata_container}>
-        <FileMetaData
-          className={styles.metadata}
-          filename={panelPhoto.filename}
-          filesizeInBytes={panelPhoto.sizeInBytes}
-        />
-        <FavoriteButton
-          isFavorited={panelPhoto.favorited}
-          onClick={onClickFavorite}
-        />
-      </div>
+      <FileMetaData
+        className={styles.metadata}
+        filename={panelPhoto.filename}
+        filesizeInBytes={panelPhoto.sizeInBytes}
+        onClickFavorite={onClickFavorite}
+        isFavorited={panelPhoto.favorited}
+      />
       <Information className={styles.information} details={details} />
       <Description className={styles.description}>
         {panelPhoto.description}

@@ -1,3 +1,4 @@
+import { Underscore } from "../underscore/underscore.component";
 import styles from "./mobile-modal.module.css";
 
 type MobileModalProps = {
@@ -22,15 +23,19 @@ export const MobileModal: React.FC<MobileModalProps> = ({
   <>
     <div className={styles.page_mask} />
     <div className={styles.modal_wrapper}>
-      <button
-        tab-index="1"
-        aria-label="close modal"
-        className={styles.close}
-        onClick={handleClose}
-      >
-        &times;
-      </button>
       <div className={styles.modal_content} style={{ borderRadius: "8px" }}>
+        <Underscore>
+          <div className={styles.modal_header}>
+            <button
+              tab-index="1"
+              aria-label="close modal"
+              className={styles.close}
+              onClick={handleClose}
+            >
+              &times;
+            </button>
+          </div>
+        </Underscore>
         {children}
       </div>
     </div>

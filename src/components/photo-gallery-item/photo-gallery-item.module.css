@@ -18,6 +18,10 @@ img.selected {
   padding: 1px;
 }
 
+.metadata {
+  margin-top: 7px;
+}
+
 .metadata > div {
   font-size: 0.9rem;
 }
