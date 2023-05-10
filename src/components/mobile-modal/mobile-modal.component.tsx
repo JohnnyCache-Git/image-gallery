@@ -23,7 +23,7 @@ export const MobileModal: React.FC<MobileModalProps> = ({
   <>
     <div className={styles.page_mask} />
     <div className={styles.modal_wrapper}>
-      <div className={styles.modal_content} style={{ borderRadius: "8px" }}>
+      <div className={styles.modal_content}>
         <Underscore>
           <div className={styles.modal_header}>
             <button
