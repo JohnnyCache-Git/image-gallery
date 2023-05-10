@@ -1,5 +1,6 @@
 .photo {
   border-radius: 12px;
+  box-sizing: border-box;
   object-fit: cover;
   opacity: 1;
   overflow: hidden;
