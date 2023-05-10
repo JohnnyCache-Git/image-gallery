@@ -1,5 +1,6 @@
 .panel {
   background-color: white;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -7,8 +8,8 @@
   width: 100%;
 }
 
-.image {
-  border-radius: 8px;
+.photo {
+  padding: 0;
 }
 
 .metadata_container {
@@ -18,6 +19,8 @@
 
 .metadata {
   margin-top: 10px;
+  max-width: 100%;
+  min-width: 0;
 }
 
 .metadata > div:first-child {

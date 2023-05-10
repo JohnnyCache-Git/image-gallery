@@ -1,0 +1,50 @@
+.modal_wrapper,
+.close {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .modal_content {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+
+  .modal_wrapper {
+    bottom: 0;
+    display: block;
+    height: 90%;
+    overflow: auto;
+    padding: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .close {
+    background: transparent;
+    border: none;
+    color: rgb(203, 213, 225);
+    display: block;
+    float: right;
+    font-size: 2rem;
+    font-weight: bold;
+    position: relative;
+    top: 40px;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .page_mask {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}

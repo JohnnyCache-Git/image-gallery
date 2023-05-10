@@ -1,21 +1,27 @@
-import { useState } from "react";
 import { PhotoGallery } from "../components/photo-gallery/photo-gallery.component";
-import { ImageResource } from "../api/images/image.resource";
 import { PhotoPanel } from "../components/photo-panel/photo-panel.component";
 import { Header } from "../components/header/header.component";
 import { HorizontalTabs } from "../components/horizontal-tabs/horizontal-tabs.component";
+import { MobileModal } from "../components/mobile-modal/mobile-modal.component";
 
 import styles from "./photos.module.css";
+import { TAB_OPTIONS, usePhotos } from "./use-photos.hook";
 
-type TAB_OPTIONS = "Recently Added" | "Favorited";
 const PAGE_TAB_OPTIONS: TAB_OPTIONS[] = ["Recently Added", "Favorited"];
 
 /**
  * The photos page. Renders tabs, a photo gallery, and a photo panel.
  */
 export const Photos = () => {
-  const [selectedTab, setSelectedTab] = useState<TAB_OPTIONS>("Recently Added");
-  const [selectedPhoto, setSelectedPhoto] = useState<ImageResource>();
+  const {
+    selectedTab,
+    selectedPhoto,
+    showMobileModal,
+    toggleModal,
+    onClickPhoto,
+    onPhotosLoad,
+    onClickTab,
+  } = usePhotos();
 
   return (
     <div className={styles.photos}>
@@ -24,19 +30,27 @@ export const Photos = () => {
         <HorizontalTabs
           selectedTab={selectedTab}
           tabOptions={PAGE_TAB_OPTIONS}
-          onClickTab={(tab) => setSelectedTab(tab as TAB_OPTIONS)}
+          onClickTab={onClickTab}
           className={styles.tabs}
         />
         <PhotoGallery
           selectedPhotoId={selectedPhoto?.id}
-          onClickPhoto={(image) => setSelectedPhoto(image)}
-          onPhotosLoad={(images) => setSelectedPhoto(images[0])}
+          onClickPhoto={onClickPhoto}
+          onPhotosLoad={onPhotosLoad}
           filter={selectedTab}
         />
       </div>
       <div className={styles.panel}>
         <PhotoPanel selectedPhoto={selectedPhoto} />
       </div>
+      {showMobileModal && (
+        <MobileModal handleClose={toggleModal}>
+          <PhotoPanel
+            selectedPhoto={selectedPhoto}
+            onDeletePhoto={toggleModal}
+          />
+        </MobileModal>
+      )}
     </div>
   );
 };

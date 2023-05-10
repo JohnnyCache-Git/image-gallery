@@ -6,7 +6,16 @@ import { getDimensionsString } from "../../utils/string.utils";
 import { DetailData } from "../detail/detail.component";
 import { useAppDispatch } from "../../app/hooks";
 
-export const usePhotoPanel = (selectedPhoto?: ImageResource) => {
+/**
+ * Helper hook for the photo panel.
+ *
+ * @param selectedPhoto   The selected photo.
+ * @param onDeletePhoto   The function that will be invoked when a photo is deleted.
+ */
+export const usePhotoPanel = (
+  selectedPhoto?: ImageResource,
+  onDeletePhoto?: () => void
+) => {
   const dispatch = useAppDispatch();
   const [panelPhoto, setPanelPhoto] = useState<ImageResource | undefined>(
     selectedPhoto
@@ -43,9 +52,10 @@ export const usePhotoPanel = (selectedPhoto?: ImageResource) => {
   const onClickDelete = useCallback(() => {
     if (photoId) {
       dispatch(deleteImage(photoId));
+      onDeletePhoto?.();
       setPanelPhoto(undefined);
     }
-  }, [dispatch, photoId]);
+  }, [dispatch, photoId, onDeletePhoto]);
 
   const onClickFavorite = useCallback(() => {
     if (panelPhoto) {

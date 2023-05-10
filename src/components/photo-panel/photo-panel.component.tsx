@@ -14,15 +14,25 @@ type PhotoPanelProps = {
    * The currently selected photo, if any.
    */
   selectedPhoto?: ImageResource;
+
+  /**
+   * The function that will be invoked when a photo is deleted.
+   */
+  onDeletePhoto?: () => void;
 };
 
 /**
  * A photo panel. Renders the photo, file metadata, a favorite button, some information, a description, and a delete button.
  * Information and description are optional.
  */
-export const PhotoPanel: React.FC<PhotoPanelProps> = ({ selectedPhoto }) => {
-  const { details, onClickDelete, onClickFavorite, panelPhoto } =
-    usePhotoPanel(selectedPhoto);
+export const PhotoPanel: React.FC<PhotoPanelProps> = ({
+  selectedPhoto,
+  onDeletePhoto,
+}) => {
+  const { details, onClickDelete, onClickFavorite, panelPhoto } = usePhotoPanel(
+    selectedPhoto,
+    onDeletePhoto
+  );
 
   if (!panelPhoto) {
     return null;
@@ -30,7 +40,7 @@ export const PhotoPanel: React.FC<PhotoPanelProps> = ({ selectedPhoto }) => {
 
   return (
     <div className={styles.panel}>
-      <Photo photo={panelPhoto} />
+      <Photo className={styles.photo} photo={panelPhoto} />
       <div className={styles.metadata_container}>
         <FileMetaData
           className={styles.metadata}

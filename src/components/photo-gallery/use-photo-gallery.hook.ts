@@ -6,6 +6,12 @@ import { ImageResource } from "../../api/images/image.resource";
 import { sortByDateDesc } from "./photo-gallery.utils";
 import { useAppSelector } from "../../app/hooks";
 
+/**
+ * Helper hook for the photo gallery.
+ *
+ * @param filter          The filter to be applied to the photo gallery.
+ * @param onPhotosLoad    The function that will be invoked when the photos load.
+ */
 export const usePhotoGallery = (
   filter: PHOTO_GALLERY_FILTER_OPTIONS,
   onPhotosLoad: (images: ImageResource[]) => void

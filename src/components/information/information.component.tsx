@@ -33,7 +33,7 @@ export const Information: React.FC<InformationProps> = ({
         <Title>Information</Title>
       </Underscore>
       {details.map((detail) => (
-        <Underscore>
+        <Underscore key={detail.name}>
           <Detail data={detail} />
         </Underscore>
       ))}
