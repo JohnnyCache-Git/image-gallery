@@ -18,7 +18,7 @@
   min-width: 0;
 }
 
-.metadata > div:first-child {
+.metadata > div > div {
   font-size: 1.4rem;
 }
 
