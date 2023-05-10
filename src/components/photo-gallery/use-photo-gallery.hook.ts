@@ -16,7 +16,7 @@ export const usePhotoGallery = (
   filter: PHOTO_GALLERY_FILTER_OPTIONS,
   onPhotosLoad: (images: ImageResource[]) => void
 ) => {
-  const { isLoading, isError, error } = useGetImagesQuery("");
+  const { isLoading, isError, error, isSuccess } = useGetImagesQuery("");
 
   const images = useAppSelector(selectImages);
 
@@ -32,16 +32,11 @@ export const usePhotoGallery = (
     return [];
   }, [filter, images]);
 
-  const photosLength = photos.length;
-
   useEffect(() => {
-    if (photosLength > 0) {
-      onPhotosLoad(photos);
-    }
+    onPhotosLoad(photos);
 
-    // Only want to run this when photos length changes on load or delete.
+    // Only want to run this once.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [photosLength]);
-
+  }, [isSuccess]);
   return { isLoading, isError, error, photos };
 };
