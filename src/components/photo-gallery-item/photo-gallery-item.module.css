@@ -1,4 +1,5 @@
 .photo_gallery_item {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
 }
