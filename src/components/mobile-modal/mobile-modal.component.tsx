@@ -24,8 +24,8 @@ export const MobileModal: React.FC<MobileModalProps> = ({
     <div className={styles.page_mask} />
     <div className={styles.modal_wrapper}>
       <div className={styles.modal_content}>
-        <Underscore>
-          <div className={styles.modal_header}>
+        <div className={styles.modal_header}>
+          <Underscore>
             <button
               tab-index="1"
               aria-label="close modal"
@@ -34,9 +34,9 @@ export const MobileModal: React.FC<MobileModalProps> = ({
             >
               &times;
             </button>
-          </div>
-        </Underscore>
-        {children}
+          </Underscore>
+        </div>
+        <div className={styles.content_wrapper}>{children}</div>
       </div>
     </div>
   </>
