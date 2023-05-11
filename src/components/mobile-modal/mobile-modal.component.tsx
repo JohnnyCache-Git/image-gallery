@@ -22,7 +22,7 @@ export const MobileModal: React.FC<MobileModalProps> = ({
   children,
   handleClose,
 }) => (
-  <>
+  <div className={styles.modal}>
     <PageMask />
     <div className={styles.modal_header}>
       <Underscore>
@@ -37,5 +37,5 @@ export const MobileModal: React.FC<MobileModalProps> = ({
       </Underscore>
     </div>
     <div className={styles.modal_content}>{children}</div>
-  </>
+  </div>
 );

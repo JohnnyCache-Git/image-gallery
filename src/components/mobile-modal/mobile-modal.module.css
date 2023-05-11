@@ -1,9 +1,12 @@
-.modal_content,
-.close {
+.modal {
   display: none;
 }
 
 @media only screen and (max-width: 600px) {
+  .modal {
+    display: initial;
+  }
+
   .modal_content {
     bottom: 0;
     background: white;
