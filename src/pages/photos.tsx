@@ -24,24 +24,26 @@ export const Photos = () => {
   } = usePhotos();
 
   return (
-    <div className={styles.photos}>
-      <div className={styles.photo_selector}>
-        <Header>Photos</Header>
-        <HorizontalTabs
-          selectedTab={selectedTab}
-          tabOptions={PAGE_TAB_OPTIONS}
-          onClickTab={onClickTab}
-          className={styles.tabs}
-        />
-        <PhotoGallery
-          selectedPhotoId={selectedPhoto?.id}
-          onClickPhoto={onClickPhoto}
-          onPhotosLoad={onPhotosLoad}
-          filter={selectedTab}
-        />
-      </div>
-      <div className={styles.panel}>
-        <PhotoPanel selectedPhoto={selectedPhoto} />
+    <>
+      <div className={styles.photos}>
+        <div className={styles.photo_selector}>
+          <Header>Photos</Header>
+          <HorizontalTabs
+            selectedTab={selectedTab}
+            tabOptions={PAGE_TAB_OPTIONS}
+            onClickTab={onClickTab}
+            className={styles.tabs}
+          />
+          <PhotoGallery
+            selectedPhotoId={selectedPhoto?.id}
+            onClickPhoto={onClickPhoto}
+            onPhotosLoad={onPhotosLoad}
+            filter={selectedTab}
+          />
+        </div>
+        <div className={styles.panel}>
+          <PhotoPanel selectedPhoto={selectedPhoto} />
+        </div>
       </div>
       {showMobileModal && (
         <MobileModal handleClose={toggleModal}>
@@ -51,6 +53,6 @@ export const Photos = () => {
           />
         </MobileModal>
       )}
-    </div>
+    </>
   );
 };

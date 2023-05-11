@@ -15,7 +15,7 @@
   .modal_wrapper {
     bottom: 0;
     display: block;
-    height: 90%;
+    height: 80%;
     overflow: auto;
     padding: 0;
     position: fixed;
@@ -28,11 +28,11 @@
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     display: flex;
-    justify-content: right;
     height: fit-content;
-    position: sticky;
-    top: 0px;
-    width: 100%;
+    position: fixed;
+    top: calc(20% - 45px);
+    width: 100vw;
+    z-index: 10;
   }
 
   .close {
