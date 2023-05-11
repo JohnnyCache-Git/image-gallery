@@ -5,9 +5,9 @@
 
 @media only screen and (max-width: 600px) {
   .modal_content {
-    background-color: white;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    background: white;
+    height: 100%;
+    overflow: auto;
     padding-right: 20px;
     padding-left: 20px;
   }
@@ -25,9 +25,13 @@
 
   .modal_header {
     background: white;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
     display: flex;
     justify-content: right;
     height: fit-content;
+    position: sticky;
+    top: 0px;
     width: 100%;
   }
 

@@ -1,7 +1,7 @@
 .transparent_heart {
   height: 21px;
-  margin-top: 1px;
   position: relative;
+  top: -21px;
   width: 26px;
 }
 
@@ -31,8 +31,9 @@
 
 .gray_heart {
   height: 22px;
-  position: absolute;
+  position: relative;
   width: 25px;
+  top: 0;
   z-index: 1;
 }
 
