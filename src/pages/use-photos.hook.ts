@@ -1,5 +1,6 @@
 import { useCallback, useState } from "react";
 import { ImageResource } from "../api/images/image.resource";
+import { isMobile } from "../utils/device.utils";
 
 export type TAB_OPTIONS = "Recently Added" | "Favorited";
 
@@ -37,7 +38,7 @@ export const usePhotos = () => {
   return {
     selectedTab,
     selectedPhoto,
-    showMobileModal,
+    showMobileModal: showMobileModal && isMobile(),
     toggleModal,
     onClickPhoto,
     onPhotosLoad,
