@@ -1,23 +1,18 @@
-.modal_wrapper,
+.modal_content,
 .close {
   display: none;
 }
 
 @media only screen and (max-width: 600px) {
   .modal_content {
-    background: white;
-    height: 100%;
-    overflow: auto;
-    padding-right: 20px;
-    padding-left: 20px;
-  }
-
-  .modal_wrapper {
     bottom: 0;
+    background: white;
+    box-sizing: border-box;
     display: block;
     height: 80%;
     overflow: auto;
-    padding: 0;
+    padding-right: 20px;
+    padding-left: 20px;
     position: fixed;
     width: 100%;
     z-index: 1;

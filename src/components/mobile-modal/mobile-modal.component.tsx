@@ -1,4 +1,6 @@
+import { PageMask } from "../page-mask/page-mask.component";
 import { Underscore } from "../underscore/underscore.component";
+
 import styles from "./mobile-modal.module.css";
 
 type MobileModalProps = {
@@ -21,7 +23,7 @@ export const MobileModal: React.FC<MobileModalProps> = ({
   handleClose,
 }) => (
   <>
-    <div className={styles.page_mask} />
+    <PageMask />
     <div className={styles.modal_header}>
       <Underscore>
         <button
@@ -34,10 +36,6 @@ export const MobileModal: React.FC<MobileModalProps> = ({
         </button>
       </Underscore>
     </div>
-    <div className={styles.modal_wrapper}>
-      <div className={styles.modal_content}>
-        <div>{children}</div>
-      </div>
-    </div>
+    <div className={styles.modal_content}>{children}</div>
   </>
 );
