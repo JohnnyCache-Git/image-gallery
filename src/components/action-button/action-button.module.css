@@ -9,3 +9,7 @@
   text-align: center;
   padding: 15px 0;
 }
+
+.button:hover {
+  background: rgb(226, 232, 240);
+}

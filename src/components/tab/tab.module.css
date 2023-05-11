@@ -10,7 +10,16 @@
   padding: 0 0 20px 0;
 }
 
+.tab:hover {
+  color: rgb(60, 76, 99);
+}
+
 .selected_tab {
+  border-bottom: solid 2px rgb(79, 69, 228);
+  color: rgb(79, 69, 228);
+}
+
+.selected_tab:hover {
   border-bottom: solid 2px rgb(79, 69, 228);
   color: rgb(79, 69, 228);
 }

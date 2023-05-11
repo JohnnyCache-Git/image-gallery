@@ -5,6 +5,11 @@
   width: 26px;
 }
 
+.transparent_heart:hover::before,
+.transparent_heart:hover::after {
+  background-color: rgb(100, 116, 139);
+}
+
 .transparent_heart::before,
 .transparent_heart::after {
   background-color: var(--color);
