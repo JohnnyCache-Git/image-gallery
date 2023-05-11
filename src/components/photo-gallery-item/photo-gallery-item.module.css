@@ -26,3 +26,10 @@ img.selected {
 .metadata > div {
   font-size: 0.9rem;
 }
+
+@media only screen and (max-width: 600px) {
+  img.selected {
+    border: none;
+    padding: 0;
+  }
+}
