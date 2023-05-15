@@ -31,11 +31,8 @@ export const imagesSlice = createSlice({
   },
 });
 
-export const selectImages = (state: {
-  images: { images: ImageResource[] };
-}) => {
-  return state.images.images;
-};
+export const selectImages = (state: { images: { images: ImageResource[] } }) =>
+  state.images.images;
 
 export const { getImages, toggleFavoriteImage, deleteImage } =
   imagesSlice.actions;
